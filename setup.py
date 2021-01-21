@@ -1,9 +1,9 @@
 from setuptools import setup
 
 setup(
-    name='Flask-MySQL-Finalsa',
+    name='finalsa-flask',
     version='1.0.0',
-    url='https://github.com/finalsa/flask-mysql/',
+    url='https://github.com/finalsa/finalsa-flask-models/',
     license='BSD',
     author='Timothee Peignier',
     author_email='timothee.peignier@tryphon.org',
