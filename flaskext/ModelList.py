@@ -1,4 +1,4 @@
-from . import sql
+from .SqlConnector import sql
 
 class ModelList(list):
 

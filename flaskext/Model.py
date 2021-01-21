@@ -1,7 +1,7 @@
 from json import JSONEncoder
 from datetime import datetime
 from .ModelList import ModelList
-from . import sql
+from .SqlConnector import sql
 import re
 
 class Model():

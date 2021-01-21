@@ -187,3 +187,6 @@ class SqlConnector():
         if(limit > 0):
             q += "LIMIT " + str(limit)
         return self.exec_json_query(q, items)
+
+
+sql = SqlConnector()
