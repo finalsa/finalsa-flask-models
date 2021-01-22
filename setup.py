@@ -14,7 +14,8 @@ setup(
     platforms='any',
     install_requires=[
         'Flask',
-        'mysql-connector-python'
+        'mysql-connector-python',
+        'python-dotenv'
     ],
     classifiers=[
         'Environment :: Web Environment',
