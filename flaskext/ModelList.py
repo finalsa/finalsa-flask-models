@@ -1,5 +1,6 @@
 from .SqlConnector import sql
 
+
 class ModelList(list):
 
     def to_json(self):
@@ -23,3 +24,6 @@ class ModelList(list):
             items
         )
         return self
+
+    def get_unique_elements_list(self, other_list):
+        return ModelList((set(other_list) | set(self)) - (set(other_list) & set(self)))
