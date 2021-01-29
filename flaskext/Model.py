@@ -1,5 +1,6 @@
 from json import JSONEncoder
 from datetime import datetime
+from decimal import Decimal
 from .ModelList import ModelList
 from .SqlConnector import sql
 import re
@@ -59,6 +60,10 @@ class Model():
                     else:
                         helper.append(key)
                 res[item] = helper
+            elif isinstance(self_dict[item], datetime):
+                res[item] = str(self[item])
+            elif isinstance(self_dict[item], Decimal):
+                res[item] = float(self_dict[item])
             else:
                 res[item] = self_dict[item]
         return res
