@@ -61,7 +61,7 @@ class Model():
                         helper.append(key)
                 res[item] = helper
             elif isinstance(self_dict[item], datetime):
-                res[item] = str(self[item])
+                res[item] = str(self_dict[item])
             elif isinstance(self_dict[item], Decimal):
                 res[item] = float(self_dict[item])
             else:
