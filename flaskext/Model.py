@@ -1,4 +1,4 @@
-from json import JSONEncoder
+from json import JSONEncoder, dumps
 from datetime import datetime
 from decimal import Decimal
 from .ModelList import ModelList
@@ -25,7 +25,7 @@ class Model():
         self.set_attributes(args)
     
     def __repr__(self):
-        return self.to_json()
+        return dumps(self.to_json())
 
     def to_json(self, visible=[]):
         self_dict = self.__dict__.copy()
