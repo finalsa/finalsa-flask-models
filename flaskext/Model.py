@@ -23,6 +23,9 @@ class Model():
         super().__init__()
         self.prepare_class()
         self.set_attributes(args)
+    
+    def __repr__(self):
+        return self.to_json()
 
     def to_json(self, visible=[]):
         self_dict = self.__dict__.copy()
@@ -144,6 +147,7 @@ class Model():
                 result['id'] = result[cls.key_name]
                 result.pop(cls.key_name)
         return cls(**result)
+    
 
     @classmethod
     def get_last_inserted(cls):
